@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Créer des objets</title>
+</head>
+<body>
+    <h1>Créer des objets</h1>
+
+    <script>
+
+        function Identite(p,n,a){
+            this.prenom = p;
+            this.nom = n;
+            this.age = a;
+        }
+
+        var pierre = new Identite("Pierre", "Giraud", 25);
+        var momo = new Identite("Momo", "SECK", 32);
+
+        alert("Age de Pierre : " + pierre.age +
+        "\nAge de Momo : " + momo.age);
+        
+        /*var moi = {
+            prenom: "Momo",
+            nom: "SECK",
+            age: 32,
+
+            id: function(){
+                return this.prenom + ' ' + this.nom + ' a ' + this.age + ' ans';
+            }
+        };
+        alert(moi.id());*/
+        
+        
+        /*var obj_string = new String("Je suis un objet");
+
+        var obj_cree = new Object();
+
+        obj_cree.prenom = "Pierre";
+        obj_cree.nom = "Giraud";
+        obj_cree.age = 25;
+
+        alert("mon prenom : " + obj_cree.prenom +
+        "\nmon nom : " + obj_cree.nom + 
+        "\nage : " + obj_cree.age)*/
+    </script>
+</body>
+</html>

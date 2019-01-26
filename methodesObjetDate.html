@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les méthodes de l'objet date</title>
+</head>
+<body>
+    <h1>Les méthodes de l'ojet date</h1>
+
+    <script>
+        var d = new Date();
+
+        var dy = d.getFullYear();
+        var dmonth = d.getMonth();
+        var dday = d.getDay();
+        var ddate = d.getDate();
+        var dh = d.getHours();
+        var dminutes = d.getMinutes();
+        var dseconds = d.getSeconds();
+
+
+
+        var mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "décembre"];
+        var jour = ['dimanche', "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+
+
+        alert("Nous sommes le :" + jour[dday] + ' ' + ddate + ' ' + mois[dmonth] + ' ' +  dy +
+        ".\nIl est : " + dh +' h ' + dminutes + ' mn et ' + dseconds + ' s');
+
+
+        
+        //methodes setteurs
+       /* var d = new Date();
+
+        d.setFullYear(2015,5,15);
+        d.setHours(12);
+        d.setMinutes(30);
+        d.setSeconds(15);
+
+        alert("Date définie : " + d);*/
+
+        // les getteurs
+        /*var dms = d.getTime();
+        var dyear = d.getFullYear();
+        var dmonth = d.getMonth() +1;
+        var ddate = d.getDate();
+        var dday = d.getDate();
+
+
+        var dhour = d.getHours();
+        var dminute = d.getMinutes();
+        var dseconds = d.getSeconds();
+        var dMillisecondes = d.getMilliseconds();
+
+
+        alert("Nous sommes le : " + ddate + " / " + dmonth + " / "  + dyear +
+        ".\nIl est actuellement : " + dhour + ":" + dminute + ":" + dseconds + ":" + dMillisecondes);*/
+
+
+     
+
+    </script>
+</body>
+</html>

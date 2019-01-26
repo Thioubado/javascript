@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Découverte du DOM</title>
+</head>
+<body>
+    <h1 id ="gros_titre">Le DOM</h1>
+    <p class = "para">DOM veut dire Document Oject Html <a href = "http://pierre-giraud.com"> un lien</a></p>
+    <p class = "para">Un deuxième paragraphe</p>
+
+    <p>document.querySelector() et document.querySelectorAll() permet de sélectionner les sélecteurs CSS comme les paragraphes, les liens, etc.</p>
+    <p>La propriété innerHTML permet de récupérer toute la phrase contenu dans un sélecteur. Par exemple la phrase contenu dans p même s'il y a un lien</p>
+    <p>La propriété textcontent permet de récupérer seulement la phrase sans le lien à l'intérieur de celle-ci</p>
+    <p>La propriété "Title", la propriété "Body" et la propriété "Links" appartiennent à l'objet Document</p>
+
+
+    <script>
+         var titre_page = document.title;
+         var page = document.body;
+         var lien = document.links;
+
+         alert("Contenu de la var titre_page : " + titre_page +
+         "\nContenu de la var page : " + page +
+         '\nContenu de la var lien : ' + lien[0]);
+
+
+        /*var para = document.querySelector('.para').innerHTML;
+        
+        var t = document.querySelector(".para").textContent;
+        
+        alert('Contenu récupéré par la variable para : ' + para +
+        "\nContenu récupéré par la variable t : " + t);*/
+
+        //innerHTML permet de récupérer de l'élément html
+        /*var titre = document.getElementById("gros_titre").innerHTML;
+        alert(titre);*/
+
+        /*var titre = document.querySelector('.para').innerHTML;
+        alert(titre);*/
+
+        // document.querySelector() et document.querySelectorAll()
+        /*var lien = document.querySelector('p a');
+        var p = document.querySelectorAll('.para');
+        
+        alert("Information dans lien : " + lien +
+        "\nInformation dans p[0] :" + p[0] +
+        "\nInformation dans p[1] : " + p[1]);*/
+
+        //document.getElementByClassName
+        /*var tableau = document.getElementsByClassName('para');
+
+        alert("Notre page contient : " + tableau.length + ' paragraphe portant la class para');*/
+        
+        //document.getElementsByTagName
+        /*var tableau = document.getElementsByTagName('p');
+
+        alert("Notre page contient : " + tableau.length + ' paragraphes');*/
+
+        //document.getElementById
+        /*var titre = document.getElementById('gros_titre');
+        alert(titre);*/
+    </script>
+</body>
+</html>

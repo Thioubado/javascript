@@ -1,0 +1,1 @@
+alert("Ceci est également affiché en javascript");

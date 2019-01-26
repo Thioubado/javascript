@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objet array et tableau</title>
+</head>
+<body>
+    <h1>Présentation de l'objet array et des tableaux</h1>
+
+    <script>
+        //Parcourrir un objet littéral:
+        var prenoms = {
+            prenom1 : "Pierre",
+            prenom2 : "Victor",
+            prenom3 : "Julia",
+            prenom4 : "Claire",
+        }, p = "";
+        
+        for(var clefs in prenoms){
+            p+= clefs + ' : ' + prenoms[clefs] + '\n';
+        }
+        alert(p);
+        /*var prenoms = {
+            prenom1 : "Pierre",
+            prenom2 : "Victor",
+            prenom3 : "Julia",
+            prenom4 : "Claire",
+        };
+        alert(prenoms.prenom1);*/
+
+
+        /*Parcourrir les éléments d'un tableau
+        var prenom = ["Pierre", "Victor", "Julia", "Claire"], p = "";
+
+        for(var i = 0; i < prenom.length; i++){
+            p+= "Prénom n° " + (i+1) + " : " + prenom[i] + '\n';
+        }
+        alert(p);*/
+        
+
+        /*var prenom = ["Pierre", "Victor", "Julia", "Claire"];
+
+        prenom[prenom.length] = "Florian";
+        prenom[prenom.length] = "Chloé";
+        
+        alert("On a ajouté " + prenom[4] + " et " + prenom[5] + "à notre tableau");*/
+        
+
+        /*var prenom = ["Pierre", "Victor", "Julia", "Claire"];
+
+        alert("Notre tableau contient : " + prenom.length + " éléments");*/
+
+        /*var prenom = ["Pierre", "Victor", "Julia", "Claire"];
+        prenom[0] = "Paul";
+        alert(prenom[0]);*/
+    </script>
+</body>
+</html>

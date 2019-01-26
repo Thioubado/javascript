@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>la méthode addEvenListener()</title>
+</head>
+<body>
+    <h1>la méthode addEvenListener(): les événements</h1>
+
+    <p>Passez sur moi</p>
+    <p>un deuxième <strong>paragraphe</strong></p>
+
+    <script>
+
+        //Exemple 3 de la methode addEvenListener
+        var p1 = document.querySelector('p');
+
+        p1.addEventListener('mouseover', fonction1);
+        p1.addEventListener('mouseout', reset1);
+        p1.addEventListener('mousedown', fonction2);
+        p1.addEventListener('mouseup', reset2);
+
+
+        function fonction1(){
+            this.innerHTML = "Cliquez moi maintenant";
+            this.style.backgroundColor = 'orange';
+        }
+
+        function reset1(){
+            this.innerHTML = 'Cliquez moi maintenant';
+            this.style.backgroundColor = "";//ce code permet à l'élément de retrouver sa couleur initiale
+        }
+
+        function fonction2(){
+            this.innerHTML = "Bravo";
+            this.style.color = "#26C";
+            this.style.fontWeight = "bold";
+            this.style.fontSize = "24px";
+        }
+        function reset2(){
+            this.innerHTML = 'Passez sur moi';
+            this.style.color = "";
+            this.style.fontWeight = "";
+            this.style.fontSize = "";
+        }
+
+
+
+
+
+        //  exemple 2 de la methode addEvenlistener
+        /*var p1 = document.querySelector('p');
+        p1.addEventListener('click', message1);
+        p1.addEventListener('click', message2);
+
+
+        function message1(){
+            alert('Mon premier message');
+        }
+        function message2(){
+            alert('Mon second message');
+        }*/
+
+        //la methode addEvenlistener déclenche la fonction changeTexte lors du clikck
+       /* var p1 = document.querySelector('p');
+        
+        p1.addEventListener('click', changeTexte);
+
+        function changeTexte(){
+            this.innerHTML = '<strong>bravo</strong>';
+            this.style.color = "orange";
+        }*/
+        
+    </script>
+</body>
+</html>

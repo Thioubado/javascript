@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid orange;
+            padding: 20px;
+            margin: 10px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+
+    <h1>les événements en Javascript</h1>
+    <div id="div1">
+        <p id="p1">Un exemple plus <strong>complexe</strong>  de la propagation</p>
+    </div>
+
+    <script>
+    var body = document.body;
+    var div1 = document.getElementById("div1");
+    var p1 = document.getElementById('p1');
+    var strong = document.querySelector('strong');
+
+
+    p1.addEventListener('click', CP1, true);
+    strong.addEventListener("click", CS, true);
+    function CP1(){alert('Capture paragraphe');};
+    function CS(){alert("Capture strong");};
+
+    div1.addEventListener("click", BD1);
+    body.addEventListener("click", BB);
+    function BD1(){alert("Bouillonnement div 1");};
+    function BB(){alert("Bouillonnement Body");};
+    
+    </script>
+
+    <!---<h1>Les événements en javascript</h1> 
+    
+    <div id="div1">
+        <p id="p1">Phase de bouillonnement utilisée</p>
+    </div>
+    <div id="div2">
+        <p id="p2">Phase de capture utilisée</p>
+    </div>
+
+    <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+        var div2 = document.getElementById('div2');
+        var p2 = document.getElementById('p2');
+        
+        //phase de bouillonnement utilisé pour div1 et p1
+        div1.addEventListener('click', MessageDiv1);
+        p1.addEventListener("click", MessageP1);
+
+        function MessageDiv1(){
+            alert('Evénement du div 1');
+        };
+        
+        function MessageP1(){
+            alert('Evénement du paragraphe 1');
+        };
+
+
+        //phase de capture utilisée pour div2 et p2
+       div2.addEventListener('click', MessageDiv2, true);
+        p2.addEventListener("click", MessageP2, true);
+
+        function MessageDiv2(){
+            alert('Evénement du Div 1');
+        };
+        function MessageP2(){
+            alert("Evénement du paragraphe 1");
+        };
+    </script>-->
+
+
+
+
+
+
+    <!--<h1>La propagation des événements en Javascript</h1>
+    <div id="div">
+        <p>Un premier Paragraphe</p>
+        <p>Un deuxième Paragraphe</p>
+
+        
+      <script>
+            var div = document.getElementById('div');
+            var p1 = document.querySelector('p');
+
+           div.addEventListener('click', MessageDiv);
+            p1.addEventListener('click', MessageP);
+
+            function MessageDiv(){
+                alert('Evénement du Div');
+            }
+
+            function MessageP(){
+                alert('Evénement du paragraphe');
+            }
+        
+        </script>-->
+    </div>
+</body>
+</html>

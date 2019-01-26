@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La portée en Javascript</title>
+</head>
+<body>
+    <h1>La portée en Javascript</h1>
+    
+    <script>
+
+        var x = 4;
+        function locale(){
+            var x = 7;
+            return x;
+        }
+       // locale();
+        alert('x globale : ' + x +
+        "\nx locale : " + locale());
+        
+        //variable globale
+     /*   var x = 4;
+        function locale(){
+            alert(x);
+        }
+        locale();*/
+        
+        // variable locale
+      /*  function locale(){
+            var x = 5;
+            alert(x);
+        }
+        locale();*/
+    </script>
+</body>
+</html>

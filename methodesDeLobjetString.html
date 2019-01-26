@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les methodes de l'objet string</title>
+</head>
+<body>
+    <h1>Les méthodes de l'objet string</h1>
+
+    <script>
+
+        var texte = "         J'apprends le JAVASCRIPT      ";
+
+        var texteNettoye = texte.trim();
+
+        alert("valeur de texte : " + texte +
+            "\nvaleur de texteNettoye : " + texteNettoye);  
+
+
+
+        /*var texte = "J'apprends le JAVASCRIPT "; //l'espace après le "t" permet de récupérer tout le mot JAVASCRIPT
+
+        var texteTronque = texte.slice(11, -1);
+        alert(texteTronque);*/
+
+        /*var texte = "J'apprends le JAVASCRIPT";
+
+        alert(texte.replace("J'", "tu "));*/
+
+        /*var texte = "J'apprends le JAVASCRIPT";
+
+        var premiere = texte.indexOf("J", 1);
+        var derniere = texte.lastIndexOf("p");
+        var sequence = texte.indexOf("le");
+        alert("première : " + premiere +
+            "\ndeniere : " + derniere +
+            "\nsequence : " + sequence);*/
+
+
+       /* var texte = "J'apprends le JAVASCRIPT";
+
+        var pos0 = texte.charAt(0);
+        var pos3 = texte.charAt(3);
+        var pos11 = texte.charAt(11);
+
+        alert("Pos0 : " + pos0 +
+            "\npos3 : " + pos3 +
+            "\npos11 : " + pos11);*/
+
+        /*
+        var texte = "j'apprends le JAVASCRIPT";
+
+        var textMin = texte.toLowerCase();
+        var textMaj = texte.toUpperCase();
+
+        alert("texte de base : " + texte +
+            "\ntexte en minisctule : " + textMin +
+        "\ntexte en majuscule : " + textMaj);*/
+    </script>
+</body>
+</html>

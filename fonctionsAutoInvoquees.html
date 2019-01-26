@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions Auto invoquées</title>
+</head>
+<body>
+    <h1>Les fonctions auto invoquées</h1>
+    <script>
+
+        (function(x){
+            x = prompt("Entrez un nombre");
+            alert("calcul " + x + " = " + x*x);
+        })()
+
+        /*(function(x){
+            x = prompt("Entrez un nombre");
+            alert("Carré de " + x + " = " + x*x);
+        })();*/
+    </script>
+</body>
+</html>

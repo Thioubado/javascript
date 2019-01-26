@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modifier du contenu HTML en JS</title>
+</head>
+<body>
+    <h1 id = "gros_titre">Accéder aux éléments HTML en Javascript</h1>
+    <p class = "para">Du texte et <a href="http://peirre-girau.com"> un lien</a></p>
+    <p class = "para">Un deuxième paragraphe</p>
+
+    <script>
+
+
+        //modifier un élément CSS
+        document.getElementById('gros_titre').style.color = "orange";
+        document.getElementById('gros_titre').style.fontSize = '40px';
+       
+        /*document.querySelector('.para').className = 'para1';*/
+
+        //Modification de la classe d'un élément
+       /* document.querySelector('a').href = "http://wikipedia.org";*/
+        
+        //Ce code permet d'ajouter une chaine de caractère à un élément
+        /*document.getElementById('gros_titre').innerHTML += ' <mark>et de la modification en javascript </mark>';*/
+
+        //Ce code permet de modifier directement le titre d'un élément
+        /*document.getElementById('gros_titre').innerHTML = 'Titre modifié';*/
+        
+        
+       /* var titre = document.getElementById('gros_titre');
+        var texteTitre = titre.innerHTML;
+        
+        var textePara = document.querySelector('.para').textContent;
+        alert('Titre : ' + texteTitre +
+        '\nPara : ' + textePara);*/
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Présentation de l'objet date</title>
+</head>
+<body>
+    <h1>Présentation de l'objet date</h1>
+
+    <script>
+        var diso1 = new Date("2015-01-19");
+        var diso2 = new Date("2019-02-21T12:00:00");
+        
+        var dcourte = new Date("06/15/2015");
+        var dlongue = new Date("January 25 2017 10:00:00");
+
+        var dcomplete = new Date("sun Jan 25 05 2015 12:00:00:00 GMT+0100");
+
+        alert("Date diso1 : " + diso1 +
+        "\nDate diso2 : " + diso2 +
+        "\nDate courte : " +dcourte +
+        "\nDate longue : " + dlongue +
+        "\ndcomplète : " +dcomplete);
+
+        /*var d1 = new Date(2018, 0, 20, 13, 56, 20, 110);
+        var d2 = new Date(2018, 0, 20);
+
+        alert("Dated de d1 : " + d1 +
+        "\nDate de d2 : " + d2);*/
+
+
+        // ce code permet d'ajouter une semaine à la date du 1er janvier (c'est que que représente le chiffre 6 au début)
+       /* var d = new Date(604800000);
+        alert(d);*/
+
+        // ce code permet d'afficher la date du 1 janvier 170
+        /*var d = new Date(0);
+
+        alert(d);*/
+
+        /*var d = new Date("January 25, 2018 13:44:00");
+
+        alert(d);*/
+
+        /*var d = new Date();
+        alert(d);*/
+
+        /*var datelist = Date();
+        var datems = Date.now();
+
+        alert('Date liste : ' + datelist +
+        "\nDate ms : " + datems);*/
+        
+    </script>
+</body>
+</html>

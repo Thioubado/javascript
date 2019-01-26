@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modifier ou supprimer des éléments HTML en Javascript</title>
+</head>
+<body>
+    <h1 id = "gros_titre">Modifier ou supprimer des éléments HTML en Javascript</h1>
+    <p class = "para">Du texte et <a href="http://peirre-girau.com"> un lien</a></p>
+    <p class = "para">Un deuxième paragraphe</p>
+    <p>La fonction : removeChild() permet de supprimerun élement du body soi un h1 soit p, etc. </p>
+    <script>
+        
+        var titre = document.getElementById('gros_titre');
+        var parent = document.body;
+
+        var nouveauTitre = document.createElement('h2');
+        nouveauTitre.id = 'titre_moyen';
+
+        nouveauTitre.innerHTML = 'Titre modifié en Javascript';
+
+        parent.replaceChild(nouveauTitre, titre);
+
+        /*var titre = document.getElementById('gros_titre');
+
+        var parent = document.body;
+
+        parent.removeChild(titre);*/
+    </script>
+</body>
+</html>
