@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le DOM et l'objet Window</title>
+</head>
+<body>
+    <h1 id = "gros_titre">Le DOM et l'objet Window</h1>
+   <!-- <p>Cliquez pour ouvrir un nouvel onglet</p> -->
+        <button id="ouvrir">Ouvrir une nouvelle fenêtre</button>
+        <button id="fermer">Fermer la fenêtre</button>
+        <button id="modifier">Changer la taille</button>
+
+    
+
+    <script>
+
+        var ouvrir = document.getElementById('ouvrir');
+
+        var fermer = document.getElementById('fermer');
+
+        var modifier = document.getElementById("modifier");
+
+        var fenetre = "";
+
+        ouvrir.addEventListener('click', fOuvrir);
+        fermer.addEventListener('click', fFermer);
+        modifier.addEventListener('click', fModifier);
+
+        function fOuvrir(){
+           fenetre = window.open('https://pierre-giraud.com', '_blank', 'width=500');
+        }
+
+        function fModifier(){
+            fenetre.resizeTo(300, 300);
+        }
+
+        function fFermer(){
+            fenetre.close();
+        }
+
+
+
+        //la methode open()
+       /* var para = document.querySelector('p');
+
+        para.addEventListener('click', fenetre);
+
+        function fenetre(){
+            window.open('https://pierre-giraud.com','_blank', 'width=500', 'height=300');
+        }*/
+
+
+
+        //La propriété document fait partie de l'objet Window
+       /* window.document.getElementById('h1');
+        document.getElementById('gros_titre');*/
+
+        //La propriété Alert fait partie de l'objet windiw
+       /* window.alert('Avec Window');
+
+        alert('Sans window');*/
+    
+    </script>
+</body>
+</html>
