@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L'objet Event en javascript</title>
+    <style>
+        div{
+            border: 1px solid orange;
+            background-color: #29B;
+            padding : 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L'objet Event en javascript</h1>
+    <div id="div1">
+        <p id="p1">Qui est le déclencheur ? Le porteur d'événement</p>
+    </div>
+
+    <script>
+
+        // LA propriété prevent Défault
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById("p1");
+
+        div1.addEventListener('click', TexteD, true);
+        p1.addEventListener("click", TexteP, true);
+
+        function TexteD(e){
+            e.preventDefault();
+        }
+
+        function TexteP(){
+            alert("La méthode preventDefault n'empêche pas la propagation");
+        }
+
+        //Les propriétés StopPropagation
+        /*var div1 = document.getElementById('div1');
+        var p1 = document.getElementById("p1");
+
+        div1.addEventListener('click', TexteD, true);
+        p1.addEventListener("click", TexteP, true);
+
+        function TexteD(e){
+            alert('Stop à la porpagation');
+            e.stopPropagation();
+        }
+
+        function TexteP(){
+            alert("Ceci ne s'affichera pas");
+        }*/
+
+
+        //La propriété current Target
+        /*var div1 = document.getElementById('div1');
+        var p1 = document.getElementById("p1");
+
+        //les propriétés target et current target
+        div1.addEventListener('click', Message);
+
+        function Message(event){
+            this.innerHTML = 'Type d\'événement déclenché : ' + event.type;
+        }*/
+
+
+      /*  var div1 = document.getElementById('div1');
+        var p1 = document.getElementById("p1");
+
+        //les propriétés target et current target
+        div1.addEventListener('click', Message);
+
+        function Message(event){
+            this.innerHTML = 'Elément déclencheur : ' + event.target +
+            '<br>Elément portant l\'événement : ' + event.currentTarget;
+        }*/
+    </script>
+</body>
+</html>
