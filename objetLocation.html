@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L'objet location</title>
+</head>
+<body>
+    <h1>L'objet location</h1>
+    <button id="charger">charger un nouveau document</button>
+    <button id="recharger">Recharger le document</button>
+    <button id="changer">Remplacer le document</button>
+    <p></p>
+
+
+    <script>
+        var para = document.querySelector('p');
+        
+        var charger = document.getElementById('charger');
+        var recharger = document.getElementById('recharger');
+        var changer = document.getElementById("changer");
+
+        charger.addEventListener('click', charge);
+        recharger.addEventListener('click', recharge);
+        changer.addEventListener('click', change);
+
+        function charge(){
+            location.assign('https://c57.fr');
+        }
+
+        function recharge(){
+            location.reload();
+        }
+
+        function change(){
+            location.replace('https://pierre-giraud.com');
+        }
+        
+        var url = location.href;
+        var chemin = location.pathname;
+
+        para.innerHTML = "URL : " + url + 
+        "<br>Chemin : " + chemin;
+    </script>
+</body>
+</html>
