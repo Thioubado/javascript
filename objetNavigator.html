@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L'objet navigator</title>
+</head>
+<body>
+    <h1>L'objet navigator</h1>
+    <p></p>
+
+
+    <script>
+
+        var para = document.querySelector('p');
+        var loc = navigator.geolocation;
+
+        (function(){
+            if(loc){
+                loc.getCurrentPosition(coordonnees);
+            }
+            else{
+                para.innerHTML = 'Localisation non disponible';
+            }
+        })();
+
+        function coordonnes(x){
+            para.innerHTML = 
+                "Lattitude : " + x.coords.latitude +
+                "<br>Longitude : " + x.coords.longitude;
+        }
+
+
+       /* var langue = navigator.language;
+        var navigateur = navigator.appName;
+        var version = navigator.appVersion;
+        var moteur = navigator.product;
+        var cookieA = navigator.cookieEnabled;
+
+        var para = document.querySelector("p");
+        para.innerHTML = 
+            "Langue utilisée : " + langue +
+            "<br>Nom du navigateur : " + navigateur +
+            "<br>version : " + version +
+            "<br>Moteur : " + moteur +
+            "Cookie ? : " + cookieA;*/
+    </script>
+</body>
+</html>
