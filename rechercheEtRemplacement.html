@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recherches et remplacements</title>
+</head>
+<body>
+    <h1>Recherches et remplacements</h1>
+    <p>Engagez-vous qu'ils disaient, rengagez-vous qu'ils disaient</p>
+    <p id = "reg"></p>
+
+
+    <script>
+
+        //la methode replace () permet de remplacer un mot ou un groupe de mot ou même un chiffre par un autre. Elle prend deux arguments: le mot à remplacer et le mot de remplacement. La lettre "g", la lettre "i" et les lettres "ig" ont leur importance sur les expressions régulières
+        var expr = document.querySelector('p');
+
+        var r1 = /vous/;
+        var r2 = /vous/g;
+
+        var res1 = expr.textContent.replace(r1, 'moi');
+        var res2 = expr.textContent.replace(r2, 'moi');
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 'Résultat de replace () sur regex 1 : ' + res1 + 
+        '<br>Résultat de replace () sur regex 2 :' + res2;
+
+
+
+
+
+
+        //méthode search()
+        /*var expr = document.querySelector('p');
+
+        var t1 = /engagez/i;
+        var t2 = /engagez/;
+
+        var tr1 = expr.textContent.search(t1);
+        var tr2 = expr.textContent.search(t2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Resultat de search() sur tr1 : " + tr1 +
+        "<br>Resultat de search() sur tr2 : " + tr2;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*pour retrouver des mots avec les expressions régulières il faut :
+        1 - Mettre les mots qu'on souhaite vérifier dans des variables
+        2 - Ensuite mettre ces vairiables dans les fonctions textContent.match() qui sont à leur mises dans des variables
+        3 - stocker dans le paragraphe vide les résultats
+        */
+        //méthode match()
+        /*var expr = document.querySelector('p');
+
+        var r1 = /engagez/i;
+        var r2 = /engagez/ig;
+
+        var res1 = expr.textContent.match(r1);
+        var res2 = expr.textContent.match(r2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat match() sur regex 1 : " + res1 +
+        "<br>Résultat match() sur regex 2 : " +  res2;*/
+    </script>
+</body>
+</html>
