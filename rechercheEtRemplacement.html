@@ -14,8 +14,34 @@
 
     <script>
 
+        //la méthode exec() va retourner ce qui est trouvé et falsesi rien est trouvé
+        var rec = document.querySelector('p').textContent;
+
+        var r1 = /aient/;
+
+        var res1 = r1.exec(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat de res1 : " + res1;
+
+
+
+
+        //la méthode test() va renvoyer true si le mot ou le texte trouvé ou renvoyer false si rien est trouvé
+        /*var rec = document.querySelector('p').textContent;
+
+        var r1 = /ENGAGEZ/;
+        var r2 = /Engagez/i;
+
+        var res1 = r1.test(rec);
+        var res2 = r2.test(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat 1 : " + res1 +
+        "<br>Résultat 2 : " + res2;*/
+
         //la methode replace () permet de remplacer un mot ou un groupe de mot ou même un chiffre par un autre. Elle prend deux arguments: le mot à remplacer et le mot de remplacement. La lettre "g", la lettre "i" et les lettres "ig" ont leur importance sur les expressions régulières
-        var expr = document.querySelector('p');
+        /*var expr = document.querySelector('p');
 
         var r1 = /vous/;
         var r2 = /vous/g;
@@ -25,7 +51,7 @@
 
         var resultat = document.getElementById('reg');
         resultat.innerHTML = 'Résultat de replace () sur regex 1 : ' + res1 + 
-        '<br>Résultat de replace () sur regex 2 :' + res2;
+        '<br>Résultat de replace () sur regex 2 :' + res2;*/
 
 
 
