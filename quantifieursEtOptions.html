@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quantifieurs et options</title>
+</head>
+<body>
+    <h1>Les Quantifieurs et les options</h1>
+    <!--<p>1, 10, 100</p>-->
+    <p>On apprend à utiliser les regex en Javascript</p>
+    <p id = "reg"></p>
+
+    <script>
+        //exemple 3 sur les options
+        var rec = document.querySelector('p').textContent;
+        var rec2 = 'Je suis sur \n deux lignes en Js';
+
+        var r1 = /on/i;
+        var res1 = rec.match(r1);
+
+        var r2 = /e/g;
+        var res2 = rec.match(r2);
+
+        var r3 = /^d/;
+        var res3 = r3.test(rec2);
+        
+        var r4 = /^d/m;
+        var res4 = r4 = r4.test(rec2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+            "Résulta de regex 1 : " + res1 +
+            "<br> Résultat regex 2 : " + res2 + 
+            "<br>Résultat regex 3 : " + res3 +
+            "<br>Résultat regex 4 : " + res4;
+
+        //deuxième exemple
+        /*var rec = document.querySelector('p').textContent;
+
+        var r1 = /x+/;
+        var res1 = r1.test(rec);
+
+        var r2 = /e(nd)?/g;
+        var res2 = rec.match(r2);
+
+        var r3 = /e$/i;
+        var res3 = r3.test(rec);
+
+        var r4 = /p{2}/;
+        var res4 = r4.test(rec);
+        
+        var r5 = /Java(?=script)/;
+        var res5 = r5.test(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+        "Présence d'un 'x' : " + res1 +
+        "<br>Occurence de 'e' ou 'end' : " + res2 +
+        "<br>Chaine finit par un 'e' : " + res3 +
+        "<br>Contient deux 'p' à la suite ? : " + res4 + 
+        "<br>Présence de la séquence 'Java' de 'Script' ? : " + res5;*/
+
+        //premier exemple de quantifeurs
+        /*var rec = document.querySelector('p').textContent;
+
+        var r1 = /10+/g;
+
+        var res1= rec.match(r1);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 'Résultat : ' + res1;*/
+    </script>
+</body>
+</html>
