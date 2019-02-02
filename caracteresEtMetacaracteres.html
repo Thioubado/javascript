@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les classes de caractères et métacaractères</title>
+</head>
+<body>
+    <h1>Les classes de caractères et métacaractères</h1>
+    <p>On apprend à utiliser les [regex] en JavaScript en 2016</p>
+    <p id="reg"></p>
+
+    <script>
+
+        //les métacaractères
+        var rec = document.querySelector('p').textContent;
+
+        var r1 = /./g;
+        var res1 = rec.match(r1);
+
+        var r2 = /\d/g;
+        var res2 = rec.match(r2);
+
+        var r3 = /\D/g;
+        var res3 = rec.match(r3);
+
+        var r4 = /\br/;
+        var res4 = r4.test(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat de r1 : " + res1 +
+        "<br>Résultat de r2 : " + res2 + 
+        "<br>Résultat de r3 : " + res3 +
+        "<br>Résultat de r4 : " + res4;
+
+        //exemple 4
+        /*var rec = document.querySelector('p').textContent;
+        
+        //cette formule permet de trouver que le mot entre crochet
+        var r1 = /\[regex\]/g;
+        var res1 = rec.match(r1);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Resultat de r1 : " + res1;*/
+
+
+        //exemple 3
+        /*var rec = document.querySelector('p').textContent;
+
+        var r1 = /[a-zàéè]/g;
+        var res1 = rec.match(r1);
+        
+        var r2 = /[a-zA-Z0-9]/g;
+        var res2 = rec.match(r2);
+
+        var r3 = /[^a-zA-Z]/g;
+        var res3 = rec.match(r3);
+        
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat de r1 : " + res1 + 
+        "<br>Résultat de r2 : " + res2 + 
+        "<br>Résultat de r3 : " + res3;*/
+
+
+
+        //exemple 2 
+        /*var rec = document.querySelector("p").textContent;
+        //cette formule permet de trouver toutes les lettres comprises en "C" et "X"
+        var r1 = /[C-X]/g;
+        var res1 = rec.match(r1);
+
+        //cette formule permet de trouver toutes les lettres autres que "aeiouy"
+        var r2 = /[^aeiouy]/g;
+        var res2 = rec.match(r2);
+        
+        //pour voir les nombres compris entre 0 et 9
+        var r3 = /[0-9]/g;
+        var res3 = rec.match(r3);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat de r1 : " + res1 + 
+        "<br>Résultat de r2 : "  + res2 +
+        "<br>R2sultat de r3 : " + res3;*/
+
+        
+
+
+        //exemple 1
+        /*var rec = document.querySelector('p').textContent;
+
+        var r1 = /aeiouy/g;
+
+        var res1 = rec.match(r1);
+
+        var r2 = /[aeiouy]/g;
+        var res2 = rec.match(r2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat de res1 : " + res1 +
+        "<br>Résultat de res2 : " + res2;*/
+
+    </script>
+</body>
+</html>
