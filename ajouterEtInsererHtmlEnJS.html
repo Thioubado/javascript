@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ajouter et insérer des éléments HTML en JAVASCRIPT</title>
 </head>
+
 <body>
     <h1>Ajouter et insérer des éléments HTML en JAVASCRIPT</h1>
-    <p class = "para">Du texte et <a href="http://peirre-girau.com"> un lien</a></p>
-    <p class = "para">Un deuxième paragraphe</p>
-    <p>La fonction: createElement(), permet de créer un élément CSS comme parexemple un élémnet p(comme paragraphe) </p>
-    <p>La fonction: createTexteNode() permet d'insérer du texte  </p>
+    <p class="para">Du texte et <a href="https://www.pierre-giraud.com/javascript/cours-complet/javascript-presentation.php"
+            target="_blank"> un lien</a></p>
+    <p class="para">Un deuxième paragraphe</p>
+    <p>La fonction: createElement(), permet de créer un élément CSS comme parexemple un élémnet p (comme paragraphe)</p>
+    <p>La fonction: createTexteNode() permet d'insérer du texte</p>
     <p>La fonction : appendChild() permet d'ajouter le nouveau élément comme par exemple p ou le h1 aprés le dernier élément du body</p>
-    <p>LA fonction : createTextNode permet d'ajouter du texte dans un élément   </p>
-    <p>La fonction insertBefore() permet d'insérer un élément entre deux autres éléments du CSS. Exeple insertBefore (l'élément à insérer, l'élément avant lequel il faut l'isérer)</p>
+    <p>La fonction : createTextNode permet d'ajouter du texte dans un élément</p>
+    <p>La fonction insertBefore() permet d'insérer un élément entre deux autres éléments du CSS. Exemple insertBefore (L'élément à insérer, l'élément avant lequel il faut l'insérer)</p>
 
     <script>
-
         var newPara = document.createElement('p');
         newPara.id = 'nouveau_paragraphe';
 
         var texte = document.createTextNode("Exemple d'insertion de javascript");
 
-
         newPara.appendChild(texte);
-        
+
         //pour insérer du texte
         var para1 = document.querySelector('.para');
 
@@ -38,20 +39,20 @@
         var texte = document.createTextNode('Inséré');
 
         newPara.appendChild(texte);
-        
+
         document.body.appendChild(newPara);*/
 
 
         /*var newPara = document.createElement('h2');
         newPara.id = 'nouveau_id';
-        
+
         var texte = document.createTextNode("titre numéro 2");
 
         newPara.appendChild(texte);
 
         document.body.appendChild(newPara);*/
 
-
     </script>
 </body>
+
 </html>
