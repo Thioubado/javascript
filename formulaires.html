@@ -17,7 +17,9 @@
 
     <form method="post" action="traitement.php">
         <label for="prenom">Entrez votre prénom</label>
-        <input type="text" name="prenom" id="prenom" required="required" maxlength="20"><br>
+        <input type="text" name="prenom" id="prenom" required="required" maxlength="20">
+        <span id="prenom_manquant"></span>
+        <br>
 
         <label for="mail">Entrez votre e-mail</label>
         <input type="email" name="mail" id="mail" required="required"><br>
@@ -25,8 +27,34 @@
         <label for="tel">Entrez votre numéro de téléphone</label>
         <input type="tel" name="tel" id="tel" required="required"><br>
 
-        <input type="submit" value="Valider">
+        <input type="submit" value="Valider" id="bouton_envoi">
     </form>
+
+    <script>
+        var validation =document.getElementById('bouton_envoi');
+        var prenom = document.getElementById('prenom');
+        var prenom_m = document.getElementById('prenom_manquant');
+        var prenom_v = /^[a-zA-ZéèîÉÈÎ][a-zéèêîç]+([-'\s][a-zA-ZéèîÉÈÎ][a-zéèêîç]+)?/;
+        validation.addEventListener('click', f_valid);
+
+        function f_valid(e){
+            //valueMissing renvoie true si le formulaire est vide. Dans ce cas preventDefault permet de bloquer l'envoi du fomulaire. Il faut alors afficher un message d'erreur
+            if(prenom.validity.valueMissing){
+                e.preventDefault();
+                prenom_m.textContent = 'prenom manquant';
+                prenom_m.style.color = 'red';
+            }
+            //vérifier avec la fonction test() si la variable englobant les expressions régulières est respectée
+            else if(prenom_v.test(prenom.value) == false){
+                e.prenventDefault();
+                prenom_m.textContent = 'format incorrect';
+                prenom_m.style.color = orange;
+            }
+            else{
+                
+            }
+        }
+    </script>
 
 </body>
 </html>
