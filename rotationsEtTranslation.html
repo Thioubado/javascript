@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rotations et translations</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas1{
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rotations et translations</h1>
+    <canvas id="canvas1" width="600" height="400"></canvas>
+
+
+    <script>
+        var canvas = document.getElementById("canvas1");
+
+        var contexte = canvas.getContext('2d');
+
+        contexte.translate(300,200);
+
+        contexte.fillStyle = '#48A';
+        contexte.fillRect(0,0,75,75);
+
+        contexte.rotate(Math.PI/2);
+        contexte.fillStyle = 'RGB(64,192,128)';
+        contexte.fillRect(0,0,75,75);
+
+        contexte.rotate(Math.PI/2);
+        contexte.fillStyle ='#A3A';
+        contexte.fillRect(0,0,75,75);
+
+        contexte.rotate(Math.PI/2);
+        contexte.fillStyle = '#E85';
+        contexte.fillRect(0,0,75,75);
+
+        //exemple de translation
+        /*contexte.fillStyle = '#48A';
+        contexte.fillRect (10,10,75,75);
+
+        contexte.translate(75,75);
+
+        contexte.fillStyle = 'RGB(64,192,128)';
+        contexte.fillRect(10,10,75,75);*/
+
+        //exemple de rotation
+        /*contexte.fillStyle = "#48A";
+        contexte.fillRect(150,25,75,75);
+
+        contexte.rotate(Math.PI/9);
+        contexte.fillStyle = 'RGBa(64,192,128,0.6)';
+        contexte.fillRect(150,25,75,75);
+
+
+        contexte.rotate(Math.PI/9);
+        contexte.fillStyle = 'RGBa(192,64,192,0.6)';
+        contexte.fillRect(150,25,75,75);*/
+    
+    </script>
+
+</body>
+</html>
