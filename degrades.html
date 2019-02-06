@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Créer des dégradés dans le canvas</title>
     <style>
-            body{
-                margin:0px;
-                padding:0px;
-            }
-            #canvas1{
-                border: 2px solid orange;
-            }
-        </style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas1 {
+            border: 2px solid orange;
+        }
+
+        #theCanva {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Créer des dégradés dans le canvas</h1>
-    <canvas id="canvas1" width="400" height="200"></canvas>
+    <div id="theCanva">
+        <h1>Créer des dégradés dans le canvas</h1>
+        <canvas id="canvas1" width="400" height="200"></canvas>
+    </div>
 
     <script>
         var canvas = document.getElementById('canvas1');
         var contexte = canvas.getContext("2d");
-        
+
         //exemple 2 sur les dégradés
-        var radial = contexte.createRadialGradient(200,100,20,200,100,75);
+        var radial = contexte.createRadialGradient(200, 100, 20, 200, 100, 75);
 
         radial.addColorStop(0, '#4C8');
         radial.addColorStop(0.5, '#48C');
@@ -32,7 +42,7 @@
 
         contexte.beginPath();
         contexte.fillStyle = radial;
-        contexte.arc(200,100,75,0,2*Math.PI);
+        contexte.arc(200, 100, 75, 0, 2 * Math.PI);
         contexte.fill();
 
 
@@ -47,4 +57,5 @@
         contexte.fillRect(100,50,200,100);*/
     </script>
 </body>
+
 </html>
