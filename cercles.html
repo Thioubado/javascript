@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dessiner des arcs de cercle dans le canvas</title>
     <style>
-        body{
-            margin:0px;
-            padding:0px;
+        body {
+            margin: 0px;
+            padding: 0px;
         }
-        #canvas1{
+
+        #canvas1 {
             border: 2px solid orange;
+        }
+
+        #theCanva {
+            margin-top: 30px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <h1>Dessiner des arcs de cercle dans le canvas</h1>
-    <canvas id = "canvas1" width="400" height="200"></canvas>
+    <div id="theCanva">
+        <h1>Dessiner des arcs de cercle dans le canvas</h1>
+        <canvas id="canvas1" width="400" height="200"></canvas>
+    </div>
 
     <script>
         var canvas = document.getElementById('canvas1');
@@ -26,20 +36,21 @@
         contexte.beginPath();
         contexte.lineWidth = '5';
         contexte.strokeStyle = "#4CB";
-        contexte.arc(75,100,50,0,Math.PI);
+        contexte.arc(75, 100, 50, 0, Math.PI);
         contexte.stroke();
 
         contexte.beginPath();
         contexte.lineWidth = '5';
         contexte.strokeStyle = "#A4A";
-        contexte.arc(200,100,50,0,2*Math.PI);
+        contexte.arc(200, 100, 50, 0, 2 * Math.PI);
         contexte.stroke();
 
         contexte.beginPath();
         contexte.lineWidth = '5';
         contexte.strokeStyle = "#48C";
-        contexte.arc(325,100,50,Math.PI,2*Math.PI);
+        contexte.arc(325, 100, 50, Math.PI, 2 * Math.PI);
         contexte.stroke();
     </script>
 </body>
+
 </html>
