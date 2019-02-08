@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les délai d'exécution en Javascript</title>
+</head>
+<body>
+    <h1>Les délai d'exécution en Javascript</h1>
+    <p>horloge actualisée en direct ! Il est <span id="temps"></span></p>
+    <button id="stop">Arrêter le temps</button>
+    <button id="btn">Cliquez</button>
+    <script>
+        //setInterval()
+        var heure = document.getElementById('temps');
+        var stop = document.getElementById('stop');
+        var tempsReel = setInterval(horloge, 1000);
+
+        function horloge(){
+            var d = new Date();
+            heure.innerHTML = d.toLocaleTimeString();
+        }
+
+        stop.addEventListener('click', arret);
+        function arret(){
+            clearInterval(tempsReel);
+        }
+
+        //setTimeout()
+        var body = document.body;
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener('click', couleur);
+        function couleur(){
+            setTimeout((function(){body.style.backgroundColor = 'blue'}), 200);
+            setTimeout((function(){body.style.backgroundColor = 'orange'}), 400);
+            setTimeout((function(){body.style.backgroundColor = '#3BA'}), 600);
+            setTimeout((function(){body.style.backgroundColor = '#59B'}), 800);
+            setTimeout((function(){body.style.backgroundColor = '#66B'}), 1000);
+            setTimeout((function(){body.style.backgroundColor = '#3BA'}), 1200);
+            setTimeout((function(){body.style.backgroundColor = 'red'}), 1400);
+            setTimeout((function(){body.style.backgroundColor = 'purple'}), 1600);
+            setTimeout((function(){body.style.backgroundColor = 'green'}), 1800);
+
+
+        }
+    </script>
+</body>
+</html>
