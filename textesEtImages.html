@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Insérer du texte et des images dans le canvas</title>
     <style>
-    body{
-        margin:0px;
-        padding:0px;
-    }
-    #canvas1{
-        border: 2px solid orange;
-    }
-</style>
-</head>
-<body>
-    <h1>Insérer du texte et des images dans le canvas</h1>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
 
-    <canvas id="canvas1" width="400" height="200"></canvas>
+        #canvas1 {
+            border: 2px solid orange;
+        }
+
+        #theCanva {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="theCanva">
+        <h1> Insérer du texte et des images dans le canvas</h1>
+        <canvas id="canvas1" width="400" height="200"></canvas>
+    </div>
+
 
     <script>
         var canvas = document.getElementById('canvas1');
         var contexte = canvas.getContext('2d');
-        
+
 
         //Insérer du texte dans le canvas
         contexte.font = 'bold 20px Verdana, Arial, serif';
         contexte.strokeStyle = '#48B';
-        contexte.strokeText('Texte creux', 25,100);
+        contexte.strokeText('Texte creux', 25, 100);
 
         contexte.font = "bold 20px Verdana, Arial, serif";
         contexte.fillStyle = "#48B";
-        contexte.fillText('Texte plein', 225,100);
+        contexte.fillText('Texte plein', 225, 100);
 
     </script>
 </body>
+
 </html>

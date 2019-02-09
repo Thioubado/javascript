@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rotations et translations</title>
     <style>
-        body{
+        body {
             margin: 0px;
             padding: 0px;
         }
 
-        #canvas1{
+        #canvas1 {
             border: 2px solid orange;
+        }
+
+        #theCanva {
+            margin-top: 30px;
+            text-align: center;
         }
     </style>
 </head>
-<body>
-    <h1>Rotations et translations</h1>
-    <canvas id="canvas1" width="600" height="400"></canvas>
 
+<body>
+    <div id="theCanva">
+        <h1>Rotations et translations</h1>
+        <canvas id="canvas1" width="400" height="400"></canvas>
+    </div>
 
     <script>
         var canvas = document.getElementById("canvas1");
 
         var contexte = canvas.getContext('2d');
 
-        contexte.translate(300,200);
+        contexte.translate(200, 200);
 
         contexte.fillStyle = '#48A';
-        contexte.fillRect(0,0,75,75);
+        contexte.fillRect(0, 0, 75, 75);
 
-        contexte.rotate(Math.PI/2);
+        contexte.rotate(Math.PI / 2);
         contexte.fillStyle = 'RGB(64,192,128)';
-        contexte.fillRect(0,0,75,75);
+        contexte.fillRect(0, 0, 75, 75);
 
-        contexte.rotate(Math.PI/2);
-        contexte.fillStyle ='#A3A';
-        contexte.fillRect(0,0,75,75);
+        contexte.rotate(Math.PI / 2);
+        contexte.fillStyle = '#A3A';
+        contexte.fillRect(0, 0, 75, 75);
 
-        contexte.rotate(Math.PI/2);
+        contexte.rotate(Math.PI / 2);
         contexte.fillStyle = '#E85';
-        contexte.fillRect(0,0,75,75);
+        contexte.fillRect(0, 0, 75, 75);
 
         //exemple de translation
         /*contexte.fillStyle = '#48A';
@@ -64,8 +72,9 @@
         contexte.rotate(Math.PI/9);
         contexte.fillStyle = 'RGBa(192,64,192,0.6)';
         contexte.fillRect(150,25,75,75);*/
-    
+
     </script>
 
 </body>
+
 </html>
