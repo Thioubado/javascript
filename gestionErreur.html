@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La gestion des erreurs en Javascript</title>
+</head>
+<body>
+    <h1>La gestion des erreurs en Javascript</h1>
+    <label for="nb">Entrez un nombre entre 0 et 1 :</label>
+    <input type="number" min="1" max="10" id='nb' name='nombre'>
+    <button type='button' id='test'>Valider</button>
+    <p id="msg"></p>
+
+
+    <script>
+        var b = document.getElementById('test');
+        b.addEventListener('click', testValeur);
+
+        function testValeur(){
+            var p = document.getElementById('msg');
+            var x = document.getElementById('nb').value;
+            try{
+                if((isNaN(x)) || (x == '')){
+                    throw 'Vous n\'avez pas rentrez de nombre valide';
+                }
+                else if((x < 1) || (x > 10)){
+                    throw 'Valeur trop grande ou trop petite';
+                }
+                else{
+                    msg.innerHTML = 'nombre ok';
+                }
+
+            }catch(e){
+                msg.innerHTML = e;
+            }
+            finally{
+                document.getElementById('nb').value='';
+            }
+        }
+    </script>
+</body>
+</html>
